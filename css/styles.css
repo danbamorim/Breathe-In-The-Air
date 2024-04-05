@@ -1,0 +1,32 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;  /* A margem é o espaço ao redor de um elemento, separando-o de outros elementos vizinhos. Quando você define margin: 0;, está basicamente removendo toda a margem do elemento, fazendo com que ele não tenha espaço extra ao seu redor.*/ 
+    padding: 0; /* define que não deve haver preenchimento interno (espaço) em torno do conteúdo de um elemento. O valor 0 indica que o preenchimento deve ser zero pixels em todas as quatro direções: superior, direita, inferior e esquerda. */
+    box-sizing: border-box; /* controla a maneira como o tamanho total de um elemento é calculado, incluindo o preenchimento (padding) e a borda (border), em relação à largura e à altura definidas.*/
+}
+
+.degrade-box{
+    width: 100%; /* prencha toda a tela */
+    padding: 300px 0;
+    display: flex; /*  é usada para criar um contêiner flexível que organiza os elementos filhos de maneira flexível. Quando aplicada a um elemento pai, essa propriedade transforma os elementos filhos em itens flexíveis que podem ser organizados em uma linha ou em uma coluna, dependendo da direção do layout definida.*/
+    align-items: center;
+    justify-content: center; /*  é utilizada em conjunção com display: flex; para alinhar os itens flexíveis horizontalmente dentro do contêiner flexível.*/ 
+    background-image: linear-gradient(to left, rgb(0, 0, 0),rgb(158, 158, 158),red,blue,rgb(27, 175, 5),rgb(223, 127, 1));
+    background-size: 500% 100%;
+    animation: degrade 10s infinite alternate; 
+}
+
+.degrade-box h1 a{
+    color: #e6e6e6;
+    font-weight: lighter; /*pra ficar fina */
+    text-decoration:none;
+    
+}
+@keyframes degrade { /*@keyframes é uma regra que permite definir animações. O identifier é um nome que você atribui à sua animação para poder referenciá-la posteriormente. */
+     0%{
+        background-position-x: 0%;
+     }
+     100%{
+        background-position-x: 100% ;
+     }
+}
